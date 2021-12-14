@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+*{
+     /* margin: 0; */
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+body{
+    color:#360736;
+    /* display:flex; */
+    /* font-size:1.6vw;
+    font-weight: bold; */
+    /* min-height: 100vh; */
+    background:linear-gradient(to bottom right, #c016ba,#360736);
+    /* background-size: cover; */
+}
+#Container{
+    width: 50vw;
+    background-color:#FFFFFF;
+    margin: 80px auto;
+    opacity: 0.6;
+    min-height: 70vh;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    box-shadow: 0px 0px 10px #e4a0f7;
+}
+
+form{
+    text-align: center;
+    /* margin: 3em 0; */
+    /* line-height: 2em; */
+}
+
+input[type="text"],input[type="email"],input[type="password"],input[type="date"]{
+    width: 24vw;
+    border: 0;
+    padding: 12px 15px;
+    margin-top: 1.2em;
+    font-size:1.2vw;
+    /* font-weight: bold; */
+    border-bottom: 2px solid #360736;
+    border-radius: 10px;
+    color:#360736
+}
+input:hover{
+    border: 2px solid #360736;
+}
+input[type="radio"]{
+    transform: scale(1.2);
+    margin-left:2.7em;
+}
+a{
+    text-decoration: none;
+    color:#c016ba;
+}
+a:hover{
+    color:#135772;
+}
+#SignUp{
+    width: 10vw;
+    padding:1em;
+    color: #FFFFFF;
+    font-weight: bold;
+    background-color: #360736;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+#SignUp:hover{
+    background-color:#FFFFFF;
+    border:2px solid #360736;
+    color:#360736;
+}
+#forgottenPassword{
+    text-align: right;
+    padding: 0 6em;
+    font-size: small;
+}

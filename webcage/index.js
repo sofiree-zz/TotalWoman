@@ -32,16 +32,38 @@ io.on('connection', socket => {
             .emit('message', formatMessage("TotalWoman", `${user.email} has joined the chat`));
 
 
-            // current user and forum
+        // current user and forum
+        io.to(user.forum).emit('forumUsers', {
+            forum: user.forum,
+            users: getIndividualUsers(user.forum)
+        });
+    });
+
+    // listen to client message
+    socket.on('chatMessage', msg => {
+        const user = getActiveuser(socket.id);
+
+        io.to(user.forum).emit('message', formatMessage(user.email, msg));
+    });
+
+    // when a client diconnects
+
+    socket.on('disconnect', () => {
+        const user = exitForum(socket.id);
+
+        if (user) {
+            io.to(user.forum).emit(
+                'message',
+                formatMessage("TotalWoman", `${user.email} has left the room`)
+            );
             io.to(user.forum).emit('forumUsers', {
                 forum: user.forum,
                 users: getIndividualUsers(user.forum)
             });
+        }
     });
 
-
-    
-})
+});
 
 
 

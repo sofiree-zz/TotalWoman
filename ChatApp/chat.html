@@ -23,7 +23,7 @@
 
 
                 <!-- Chat friends list -->
-                <ul class="friend-list">
+                <ul class="friend-list" id="users">
                     <li class="active bounceInDown">
                         <a href="#" class="clearfix">
                             <img src="./Assets/woman-5924366_1920.jpg" alt="" class="img-circle">
@@ -131,7 +131,7 @@
                                         ago</small>
                                 </div>
                                 <p>
-                                   Hello. Are you there?
+                                    Hello. Are you there?
                                 </p>
                             </div>
                         </li>
@@ -146,7 +146,7 @@
                                         ago</small>
                                 </div>
                                 <p>
-                                    Yes, I am. Thank you and welcome to the group. 
+                                    Yes, I am. Thank you and welcome to the group.
                                 </p>
                             </div>
                         </li>
@@ -206,7 +206,7 @@
                                         ago</small>
                                 </div>
                                 <p>
-                                   Nice to meet you Jane. My name is Sonia Bell.
+                                    Nice to meet you Jane. My name is Sonia Bell.
                                 </p>
                             </div>
                         </li>
@@ -228,24 +228,21 @@
                     </ul>
                 </div>
                 <div class="chat-box bg-white">
-                    <div class="input-group">
+                    <form class="input-group" id="chat-form">
                         <input class="form-control no-shadow no-rounded" placeholder="What's new..."
-                            style="border: 1px solid #9A0794;">
+                            style="border: 1px solid #9A0794;" id="msg" type="text" required autocomplete="off">
                         <span class="input-group-btn">
                             <button class="btn no-rounded" type="button" id="sendButton">Send</button>
                         </span>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 
-    <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
-    integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
-    crossorigin="anonymous"
-  ></script>
-  <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+        integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4=" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
     <script src="../webcage/Public/main.js"></script>
 </body>
 

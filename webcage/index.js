@@ -6,7 +6,7 @@ const formatMessage = require('./helpers/formatDate')
 const {
     getActiveuser,
     exitForum,
-    getIndividualUser,
+    getIndividualUsers,
     newUser
 } = require('./helpers/userHelper');
 

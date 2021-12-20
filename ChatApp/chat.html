@@ -13,237 +13,45 @@
 
 <body>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 bg-white">
-                <div class=" row padding-sm" style="height: 50px; border-bottom: 1px solid #9A0794">
-                    <h6>Members</h6>
-                    <a href="../webcage/Public/index.html" id="leave-btn">Leave Forum</a>
-                </div>
-
-
-                <!-- Chat friends list -->
-                <ul class="friend-list" id="users">
-                    <li class="active bounceInDown">
-                        <a href="#" class="clearfix">
-                            <img src="./Assets/woman-5924366_1920.jpg" alt="" class="img-circle">
-                            <div class="friend-name">
-                                <strong id="friendName">Susan Strong</strong>
-                            </div>
-                            <div class="last-message">Hello, Are you there?</div>
-                            <small class="time">Just now</small>
-                            <small class="chat-alert label label-danger">1</small>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="clearfix">
-                            <img src="./Assets/woman-6242836_1920.png" alt="" class="img-circle">
-                            <div class="friend-name">
-                                <strong id="friendName">Jane Disck</strong>
-                            </div>
-                            <div class="last-message ">I would love to talk.</div>
-                            <small class="time ">5 mins ago</small>
-                            <small class="chat-alert "><i class="fa fa-check"></i></small>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="clearfix">
-                            <img src="./Assets/woman-6527938_1920.png" alt="" class="img-circle">
-                            <div class="friend-name">
-                                <strong id="friendName">Sonia Bell</strong>
-                            </div>
-                            <div class="last-message ">Hello, Are you there?</div>
-                            <small class="time ">Yesterday</small>
-                            <small class="chat-alert "><i class="fa fa-reply"></i></small>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="clearfix">
-                            <img src="./Assets/woman-6742784_1920.jpg" alt="" class="img-circle">
-                            <div class="friend-name">
-                                <strong id="friendName">Jennifer Udu</strong>
-                            </div>
-                            <div class="last-message ">I would love to talk.</div>
-                            <small class="time">Yesterday</small>
-                            <small class="chat-alert"><i class="fa fa-reply"></i></small>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="clearfix">
-                            <img src="./Assets/woman-6751389_1920.png" alt="" class="img-circle">
-                            <div class="friend-name">
-                                <strong id="friendName">Cateryn Gail</strong>
-                            </div>
-                            <div class="last-message ">Hi, How are you?</div>
-                            <small class="time">Yesterday</small>
-                            <small class="chat-alert"><i class="fa fa-reply"></i></small>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="clearfix">
-                            <img src="./Assets/woman-5924366_1920.jpg" alt="" class="img-circle">
-                            <div class="friend-name">
-                                <strong id="friendName">Annabelle Su</strong>
-                            </div>
-                            <div class="last-message ">I have been through so much</div>
-                            <small class="time">Yesterday</small>
-                            <small class="chat-alert "><i class="fa fa-reply"></i></small>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="clearfix">
-                            <img src="./Assets/woman-6242836_1920.png" alt="" class="img-circle">
-                            <div class="friend-name">
-                                <strong id="friendName">Kathy Ann</strong>
-                            </div>
-                            <div class="last-message">Can we meet today?</div>
-                            <small class="time ">Yesterday</small>
-                            <small class="chat-alert "><i class="fa fa-reply"></i></small>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="clearfix">
-                            <img src="./Assets/woman-6527938_1920.png" alt="" class="img-circle">
-                            <div class="friend-name">
-                                <strong id="friendName">Teddy A</strong>
-                            </div>
-                            <div class="last-message">Hi, How are you?</div>
-                            <small class="time ">5 mins ago</small>
-                            <small class="chat-alert "><i class="fa fa-check"></i></small>
-                        </a>
-                    </li>
-                </ul>
+    <body>
+        <div class="chat-container">
+          <header class="chat-header">
+            <h1><i class="fas fa-kiwi-bird"></i> Total Woman </h1>
+            <a href="../webcage/Public/index.html" class="btn" id="leave-btn">Leave Room</a>
+          </header>
+      
+          <main class="chat-main">
+            <div class="chat-sidebar">
+              <h2 id="room-name"></h2>
+              <h3><i class="fas fa-user"></i> Online</h3>
+              <ul id="users">
+              </ul>
             </div>
-
-
-            <!-- selected chats view -->
-            <div class="col-md-8 bg-white ">
-                <div class="chat-message">
-                    <ul class="chat">
-                        <li class="left clearfix">
-                            <span class="chat-img pull-left">
-                                <img src="./Assets/woman-6742784_1920.jpg" alt="User Avatar">
-                            </span>
-                            <div class="chat-body clearfix">
-                                <div class="header">
-                                    <strong class="primary-font" id="activeName">Susan Strong</strong>
-                                    <small class="pull-right" id="activeName"><i class="fa fa-clock-o"></i> 12 mins
-                                        ago</small>
-                                </div>
-                                <p>
-                                    Hello. Are you there?
-                                </p>
-                            </div>
-                        </li>
-                        <li class="right clearfix">
-                            <span class="chat-img pull-right">
-                                <img src="./Assets/woman-6751389_1920.png" alt="User Avatar">
-                            </span>
-                            <div class="chat-body clearfix">
-                                <div class="header">
-                                    <strong class="primary-font" id="activeName">Teddy A</strong>
-                                    <small class="pull-right" id="activeName"><i class="fa fa-clock-o"></i> 13 mins
-                                        ago</small>
-                                </div>
-                                <p>
-                                    Yes, I am. Thank you and welcome to the group.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="left clearfix">
-                            <span class="chat-img pull-left">
-                                <img src="./Assets/woman-5924366_1920.jpg" alt="User Avatar">
-                            </span>
-                            <div class="chat-body clearfix">
-                                <div class="header">
-                                    <strong class="primary-font" id="activeName">Kathy Ann</strong>
-                                    <small class="pull-right" id="activeName"><i class="fa fa-clock-o"></i> 12 mins
-                                        ago</small>
-                                </div>
-                                <p>
-                                    It is very nice to meet you.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="right clearfix">
-                            <span class="chat-img pull-right">
-                                <img src="./Assets/woman-6242836_1920.png" alt="User Avatar">
-                            </span>
-                            <div class="chat-body clearfix">
-                                <div class="header">
-                                    <strong class="primary-font" id="activeName">Cateryn Gail</strong>
-                                    <small class="pull-right" id="activeName"><i class="fa fa-clock-o"></i> 13 mins
-                                        ago</small>
-                                </div>
-                                <p>
-                                    Can you introduce yourself so we may know you?
-                                </p>
-                            </div>
-                        </li>
-                        <li class="left clearfix">
-                            <span class="chat-img pull-left">
-                                <img src="./Assets/woman-6527938_1920.png" alt="User Avatar">
-                            </span>
-                            <div class="chat-body clearfix">
-                                <div class="header">
-                                    <strong class="primary-font" id="activeName">Jane Disck</strong>
-                                    <small class="pull-right" id="activeName"><i class="fa fa-clock-o"></i> 12 mins
-                                        ago</small>
-                                </div>
-                                <p>
-                                    My name is Jane Disck
-                                </p>
-                            </div>
-                        </li>
-                        <li class="right clearfix">
-                            <span class="chat-img pull-right">
-                                <img src="./Assets/woman-6742784_1920.jpg" alt="User Avatar">
-                            </span>
-                            <div class="chat-body clearfix">
-                                <div class="header">
-                                    <strong class="primary-font" id="activeName">Sonia Bell</strong>
-                                    <small class="pull-right" id="activeName"><i class="fa fa-clock-o"></i> 13 mins
-                                        ago</small>
-                                </div>
-                                <p>
-                                    Nice to meet you Jane. My name is Sonia Bell.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="right clearfix">
-                            <span class="chat-img pull-right">
-                                <img src="./Assets/woman-6751389_1920.png" alt="User Avatar">
-                            </span>
-                            <div class="chat-body clearfix">
-                                <div class="header">
-                                    <strong class="primary-font" id="activeName">Annabelle Su</strong>
-                                    <small class="pull-right" id="activeName"><i class="fa fa-clock-o"></i> 13 mins
-                                        ago</small>
-                                </div>
-                                <p>
-                                    Hello Everyone, nice to meet you all.
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="chat-box bg-white">
-                    <form class="input-group" id="chat-form">
-                        <input class="form-control no-shadow no-rounded" placeholder="What's new..."
-                            style="border: 1px solid #9A0794;" id="msg" type="text" required autocomplete="off">
-                        <span class="input-group-btn">
-                            <button class="btn no-rounded" type="button" id="sendButton">Send</button>
-                        </span>
-                    </form>
-                </div>
+            <div class="chat-messages">
             </div>
+          </main>
+          
+          <div class="chat-form-container">
+            <form id="chat-form">
+              <input
+                id="msg"
+                type="text"
+                placeholder="Type a Message"
+                required
+                autocomplete="off"
+              />
+              <button class="btn-plane"><i class="fas fa-paper-plane"></i> </button>
+            </form>
+          </div>
         </div>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
-        integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4=" crossorigin="anonymous"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="../webcage/Public/main.js"></script>
+      
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+          integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
+          crossorigin="anonymous"
+        ></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -24,7 +24,7 @@ function exitForum(id) {
 }
 
 // Get room users
-function getIndividualUser(forum) {
+function getIndividualUsers(forum) {
   return users.filter(user => user.forum === forum);
 }
 
@@ -32,5 +32,5 @@ module.exports = {
   newUser,
   getActiveUser,
   exitForum,
-  getIndividualUser
+  getIndividualUsers
 };

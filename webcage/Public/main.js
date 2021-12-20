@@ -1,15 +1,17 @@
 const chatForm = document.getElementById('chat-form');
 const chatMessages = document.querySelector('.chat-messages');
+const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
 
-const { username, forum } = Qs.parse(location.search, {
+const { email, forum } = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
 });
+console.log({email, forum});
 
-const socket = io();
+ const socket = io();
 
 // Join chatroom
-socket.emit('joinForum', { username, forum });
+socket.emit('joinForum', { email, forum });
 
 socket.on('forumUsers', ({ forum, users }) => {
     outputForumName(forum);
@@ -44,12 +46,34 @@ chatForm.addEventListener('submit', (e) => {
     e.target.elements.msg.focus();
   });
 
+// Output message to DOM
+function outputMessage(message) {
+    const div = document.createElement('div');
+    div.classList.add('message');
+    const p = document.createElement('p');
+    p.classList.add('meta');
+    p.innerText = message.username;
+    p.innerHTML += `<span>${message.time}</span>`;
+    div.appendChild(p);
+    const para = document.createElement('p');
+    para.classList.add('text');
+    para.innerText = message.text;
+    div.appendChild(para);
+    document.querySelector('.chat-messages').appendChild(div);
+  }
+  
+  // Add room name to DOM
+  function outputRoomName(room) {
+    roomName.innerText = room;
+  }
+
+
   // Add users to DOM
 function outputUsers(users) {
     userList.innerHTML = '';
     users.forEach((user) => {
       const li = document.createElement('li');
-      li.innerText = user.username;
+      li.innerText = user.email;
       userList.appendChild(li);
     });
   }
